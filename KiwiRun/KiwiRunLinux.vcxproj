@@ -61,16 +61,16 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ProjectReference Include="..\KiwiLibraryLinux\KiwiLibraryLinux.vcxproj">
+    <ClCompile Include="KiwiRun.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiwiLibrary\KiwiLibraryLinux.vcxproj">
       <Project>{505e5316-76fb-4f4b-853c-969c976c8c8a}</Project>
-      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\KiwiRun\KiwiRun.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\KiwiRun\stdafx.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -78,7 +78,7 @@
     </ClCompile>
     <Link>
       <LibraryDependencies>KiwiLibraryLinux</LibraryDependencies>
-      <AdditionalLibraryDirectories>/root/projects/KiwiLibraryLinux/bin/x64/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>/root/projects/KiwiLibrary/bin/x64/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -87,7 +87,7 @@
     </ClCompile>
     <Link>
       <LibraryDependencies>KiwiLibraryLinux</LibraryDependencies>
-      <AdditionalLibraryDirectories>/root/projects/KiwiLibraryLinux/bin/x64/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>/root/projects/KiwiLibrary/bin/x64/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

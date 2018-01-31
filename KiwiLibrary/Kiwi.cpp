@@ -535,7 +535,7 @@ vector<const KChunk*> Kiwi::divideChunk(const k_vchunk& ch)
 	return ret;
 }
 
-void printMorph(const KMorpheme* morph)
+/*void printMorph(const KMorpheme* morph)
 {
 	if (morph->chunks)
 	{
@@ -566,7 +566,7 @@ inline void debugNodes(KMorphemeNode* node, const pair<vector<char>, float>& pat
 		printMorph(node->morpheme);
 	}
 	puts("\n");
-}
+}*/
 
 const k_vpcf* Kiwi::getOptimaPath(KMorphemeNode* node, size_t topN, KPOSTag prefix, KPOSTag suffix) const
 {
@@ -928,7 +928,9 @@ vector<KInterResult> Kiwi::analyzeJM2(const k_string & jm, size_t topN, KPOSTag 
 	}
 	else // if there are no matched path
 	{
-		ret.emplace_back(vector<tuple<const KMorpheme*, k_wstring, KPOSTag>>{ {nullptr, joinJamo(jm), KPOSTag::UNKNOWN} }, P_MIN);
+		vector<tuple<const KMorpheme*, k_wstring, KPOSTag>> v;
+		v.emplace_back(nullptr, joinJamo(jm), KPOSTag::UNKNOWN );
+		ret.emplace_back(v, P_MIN);
 	}
 	for (auto& tm : tmpMorph)
 	{

@@ -63,34 +63,36 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClCompile Include="..\KiwiLibrary\KFeatureTestor.cpp" />
-    <ClCompile Include="..\KiwiLibrary\KForm.cpp" />
-    <ClCompile Include="..\KiwiLibrary\Kiwi.cpp" />
-    <ClCompile Include="..\KiwiLibrary\KModelMgr.cpp" />
-    <ClCompile Include="..\KiwiLibrary\KTrie.cpp" />
-    <ClCompile Include="..\KiwiLibrary\Utils.cpp" />
+    <ClCompile Include="KFeatureTestor.cpp" />
+    <ClCompile Include="KForm.cpp" />
+    <ClCompile Include="Kiwi.cpp" />
+    <ClCompile Include="KModelMgr.cpp" />
+    <ClCompile Include="KTrie.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\KiwiLibrary\KFeatureTestor.h" />
-    <ClInclude Include="..\KiwiLibrary\KForm.h" />
-    <ClInclude Include="..\KiwiLibrary\Kiwi.h" />
-    <ClInclude Include="..\KiwiLibrary\KiwiHeader.h" />
-    <ClInclude Include="..\KiwiLibrary\KMemory.h" />
-    <ClInclude Include="..\KiwiLibrary\KMemoryChar.h" />
-    <ClInclude Include="..\KiwiLibrary\KMemoryKChunk.h" />
-    <ClInclude Include="..\KiwiLibrary\KModelMgr.h" />
-    <ClInclude Include="..\KiwiLibrary\KTrie.h" />
-    <ClInclude Include="..\KiwiLibrary\stdafx.h" />
-    <ClInclude Include="..\KiwiLibrary\Utils.h" />
+    <ClInclude Include="KFeatureTestor.h" />
+    <ClInclude Include="KForm.h" />
+    <ClInclude Include="Kiwi.h" />
+    <ClInclude Include="KiwiHeader.h" />
+    <ClInclude Include="KMemory.h" />
+    <ClInclude Include="KMemoryChar.h" />
+    <ClInclude Include="KMemoryKChunk.h" />
+    <ClInclude Include="KModelMgr.h" />
+    <ClInclude Include="KTrie.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <AdditionalOptions>-fpermissive %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <CppLanguageStandard>c++1y</CppLanguageStandard>
+      <AdditionalOptions>-fpermissive %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
